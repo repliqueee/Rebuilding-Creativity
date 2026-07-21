@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebuilding Creativity — Новые Выпуски</title>
+  <meta name="description" content="Короткие интервью и разговоры с людьми из креативной индустрии.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header id="site-header" class="site-header"></header>
+
+  <main class="feed" id="feed"></main>
+
+  <footer class="site-footer">
+    Rebuilding Creativity — © <span id="year"></span>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    initFeedPage();
+  </script>
+</body>
+</html>
