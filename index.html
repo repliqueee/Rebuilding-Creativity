@@ -85,7 +85,6 @@ button { font-family: inherit; cursor: pointer; }
 .menu-btn.is-close svg { width: 16px; height: 16px; }
 .menu-btn__bars { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
 .menu-btn__bar { width: 18px; height: 2px; border-radius: 1px; background: #1c1c1c; }
-.menu-logo { display: none; }
 
 .menu-overlay {
   position: fixed; inset: 0; background: var(--bg); z-index: 100;
@@ -192,8 +191,8 @@ button { font-family: inherit; cursor: pointer; }
     background: #F4F4F4; border: 1px solid #F3EFFF;
     box-sizing: border-box; box-shadow: none; z-index: 50;
   }
-  .menu-btn__bars { display: none; }
-  .menu-logo { display: block; width: 35px; height: 28px; object-fit: contain; }
+  .menu-btn__bars { gap: 6px; }
+  .menu-btn__bar { width: 20px; height: 1px; border-radius: 0; background: #1A1A1A; }
 
   .feed { padding-top: 90px; }
 }
@@ -254,7 +253,7 @@ const INTERVIEWS = [
       { name: "Ваней Казуковым", url: "#" },
       { name: "Степаном Липатовым", url: "#" },
     ],
-    hero: { type: "image", image: "berlin-festival-cover.jpg" },
+    hero: { type: "image", image: "deconstructing-beauty-cover.jpg" },
     title: 'Деконструкция красоты: Почему "неправильно" новое "круто"?',
     excerpt: "Обсудили с дизайнерами Ваней Казуковым и Степаном Липатовым, почему в 2026 году концепция «идеального дизайна» мертва.",
   },
@@ -291,7 +290,6 @@ function renderHeader() {
         <span class="menu-btn__bar"></span>
         <span class="menu-btn__bar"></span>
       </span>
-      <img class="menu-logo" src="logo.png" alt="Меню" onerror="this.style.display='none'">
     </button>
   `;
   document.getElementById("menuToggle").addEventListener("click", openMenu);
