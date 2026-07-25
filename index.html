@@ -19,7 +19,7 @@
   --accent-lime: #dcea55;
   --accent-blue: #4a5cf5;
 
-  --pill-bg: #ececec;
+  --pill-bg: #e9eae9;
   --pill-text: #48474b;
 
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -167,10 +167,14 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .pub-card__text-plate {
-  background: var(--card-bg);
+  background: #F4F4F4;
+  border: 1px solid #F3EFFF;
+  border-top: none;
   border-radius: 0 0 15px 15px;
   box-sizing: border-box;
-  padding: 10px 10px 16px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pub-card__title {
@@ -196,7 +200,8 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
 }
 
 .pill {
@@ -232,7 +237,7 @@ button { font-family: inherit; cursor: pointer; }
     background: #F4F4F4; border: 1px solid #F3EFFF;
     box-sizing: border-box; z-index: 50;
   }
-  .site-logo { width: 26px; height: 26px; object-fit: contain; }
+  .site-logo { width: 35px; height: 28px; object-fit: contain; }
 
   .site-title {
     position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
@@ -250,7 +255,7 @@ button { font-family: inherit; cursor: pointer; }
   .menu-btn__bar { width: 20px; height: 1px; border-radius: 0; background: #1A1A1A; }
 
   .feed {
-    padding-top: 90px;
+    padding-top: 70px;
     grid-template-columns: 556px;
     justify-content: center;
     gap: 24px;
@@ -259,8 +264,7 @@ button { font-family: inherit; cursor: pointer; }
 
   .pub-card__photo-plate { width: 556px; height: 332px; }
   .pub-card__photo { width: 536px; height: 312px; margin: 0 auto; }
-  .pub-card__text-plate { width: 556px; height: 136px; padding: 10px 10px 0 10px; }
-  .pub-card__tags { margin-top: 31px; }
+  .pub-card__text-plate { width: 556px; min-height: 136px; }
 }
 </style>
 </head>
