@@ -219,8 +219,6 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (min-width: 720px) {
-  .feed { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .card--hero { grid-column: 1 / -1; }
   .card--hero .hero-block { aspect-ratio: 21 / 9; }
 }
 
@@ -253,11 +251,11 @@ button { font-family: inherit; cursor: pointer; }
 
   .feed {
     padding-top: 90px;
-    grid-template-columns: repeat(auto-fit, 556px);
+    grid-template-columns: 556px;
     justify-content: center;
     gap: 24px;
   }
-  .card--hero { grid-column: auto; }
+  .card--hero { grid-column: auto; width: 556px; }
 
   .pub-card__photo-plate { width: 556px; height: 332px; }
   .pub-card__photo { width: 536px; height: 312px; margin: 0 auto; }
