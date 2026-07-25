@@ -392,7 +392,7 @@ function renderPubCard(item) {
         <p class="pub-card__title">${escapeHtml(item.title)}</p>
         <p class="pub-card__excerpt">${escapeHtml(item.excerpt)}</p>
         <div class="pub-card__tags">
-          ${item.tags.map(t => `<span class="pill pill--tag">${escapeHtml(t)}</span>`).join("")}
+          ${item.tags.map(t => `<span class="pill pill--nav">${escapeHtml(t)}</span>`).join("")}
         </div>
       </div>
     </a>
