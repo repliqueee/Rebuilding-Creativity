@@ -327,7 +327,7 @@ const INTERVIEWS = [
     tags: ["Разговоры", "Дизайн", "Философия"],
     hero: { type: "image", image: "fatigue-burnout-cover.webp" },
     title: "Fatigue Burnout: Как побороть усталость?",
-    excerpt: "Мы поговорили с дизайнерами и стилистами о том, как работать с выгоранием.",
+    excerpt: "Мы поговорили с дизайнерами и стилистами о том,\nкак работать с выгоранием.",
   },
   {
     slug: "deconstructing-beauty",
@@ -339,7 +339,7 @@ const INTERVIEWS = [
     ],
     hero: { type: "image", image: "deconstructing-beauty-cover.webp" },
     title: 'Деконструкция красоты: Почему "неправильно" новое "круто"?',
-    excerpt: "Обсудили с дизайнерами Ваней Казуковым и Степаном Липатовым, почему в 2026 году концепция «идеального дизайна» мертва.",
+    excerpt: "Обсудили с дизайнерами Ваней Казуковым и Степаном Липатовым, \nпочему в 2026 году концепция «идеального дизайна» мертва.",
   },
   {
     slug: "berlin-festival-posters",
@@ -347,7 +347,7 @@ const INTERVIEWS = [
     tags: ["Дизайн"],
     hero: { type: "image", image: "berlin-festival-cover.webp" },
     title: "Афиши для берлинского фестиваля",
-    excerpt: "Обсудили создание афиш для берлинского фестиваля Yo-Fen с лайн-апом в 75 артистов.",
+    excerpt: "Обсудили создание афиш для берлинского фестиваля Yo-Fen \nс лайн-апом в 75 артистов.",
   },
 ];
 
@@ -440,7 +440,7 @@ function renderPubCard(item) {
       </div>
       <div class="pub-card__text-plate">
         <p class="pub-card__title">${escapeHtml(item.title)}</p>
-        <p class="pub-card__excerpt">${escapeHtml(item.excerpt)}</p>
+        <p class="pub-card__excerpt">${escapeHtml(item.excerpt).replace(/\n/g, '<br>')}</p>
         <div class="pub-card__tags">
           ${item.tags.map((t, idx) => {
   const isCategory = CATEGORIES.some(c => c.label === t);
