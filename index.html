@@ -226,7 +226,6 @@ button { font-family: inherit; cursor: pointer; }
 .pub-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   margin-top: auto;
   padding-top: 16px;
 }
@@ -443,9 +442,16 @@ function renderPubCard(item) {
         <p class="pub-card__title">${escapeHtml(item.title)}</p>
         <p class="pub-card__excerpt">${escapeHtml(item.excerpt)}</p>
         <div class="pub-card__tags">
-          ${item.tags.map(t => {
+          ${item.tags.map((t, idx) => {
   const isCategory = CATEGORIES.some(c => c.label === t);
-  return `<span class="pill ${isCategory ? 'pill--tag' : 'pill--nav'}">${escapeHtml(t)}</span>`;
+  const type = isCategory ? 'pill--tag' : 'pill--nav';
+  let marginLeft = 0;
+  if (idx > 0) {
+    const prevIsCategory = CATEGORIES.some(c => c.label === item.tags[idx - 1]);
+    const sameType = prevIsCategory === isCategory;
+    marginLeft = sameType ? 0 : -2;
+  }
+  return `<span class="pill ${type}" style="margin-left:${marginLeft}px;">${escapeHtml(t)}</span>`;
 }).join("")}
         </div>
       </div>
